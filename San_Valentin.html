@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para mi princesita </title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 25px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #ff4d6d;
+      font-size: 2.5em;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.1em;
+      margin: 20px 0;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #ff4d6d;
+      margin: 20px 0;
+    }
+
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff1e4d;
+      transform: scale(1.05);
+    }
+
+    #videoSection {
+      display: none;
+      margin-top: 20px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Para mis ricitos bellos ❤️</h1>
+
+    <img src="HKDD.jpg" class="photo">
+
+    <p>
+      Desde que llegaste a mi vida tengo un motivo más de ser feliz, mi motivación, mi motivo de ser, te cuidare y amare para siempre.
+      Gracias por llegar a mi vida.
+    </p>
+
+    <button onclick="mostrarVideo()">
+        Tengo algo que quiero que veas
+    </button>
+
+    <div id="videoSection">
+      <p><strong>Tarde mucho pero si veo tus compartidos amorcito</strong></p>
+      <video controls autoplay>
+        <source src="Morenamia.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script>
+    function mostrarVideo() {
+      document.getElementById("videoSection").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
